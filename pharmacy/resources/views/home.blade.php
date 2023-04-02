@@ -18,8 +18,7 @@
         <section id="about" class="about">
         <div class="container" data-aos="fade-up">
             <div class="section-title">
-            <h2>About Us</h2>
-            <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
+                <h2>About Us</h2>
             </div>
             <div class="row">
             <div class="col-lg-5" data-aos="fade-right">
@@ -42,7 +41,7 @@
         </div>
         </section><!-- End About Us Section -->
 
-        <!-- ======= Counts Section ======= -->
+        <!-- ======= Counts Section tolong======= -->
         <section id="counts" class="counts">
         <div class="container" data-aos="fade-up">
 
