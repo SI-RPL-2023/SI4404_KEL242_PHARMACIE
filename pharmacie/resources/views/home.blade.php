@@ -297,7 +297,7 @@
         <div class="container">
             <div class="row my-5">
                 <div class="col-md-6 mx-auto text-center">
-                    <h2>Frequently Asked Questions</h2>
+                    <h2>Pertanyaan yang Sering Diajukan</h2>
                 </div>
             </div>
             <div class="row">
