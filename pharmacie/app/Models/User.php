@@ -50,4 +50,14 @@ class User extends Authenticatable
         return $this->hasMany(Appointment::class , 'patient_id' , 'id');
     }
 
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+
+    public function carts()
+    {
+        return $this->hasMany(Cart::class);
+    }
+
 }
