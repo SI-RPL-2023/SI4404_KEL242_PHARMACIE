@@ -36,6 +36,15 @@
                         <li class="nav-item">
                             <a class="nav-link btn btn-info text-white m-2 p-2" href="{{ route('landing.medicine') }}">Shop Medicine</a>
                         </li>
+
+                        @guest
+                        @else
+
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-success text-white m-2 p-2" href="{{ route('landing.medicine') }}">  Cart ( {{count(\Illuminate\Support\Facades\Auth::user()->carts)}} )</a>
+                            </li>
+
+                        @endguest
                     </ul>
 
                     <!-- Right Side Of Navbar -->

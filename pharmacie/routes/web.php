@@ -17,6 +17,13 @@ Route::get('/' , [\App\Http\Controllers\LandingController::class , 'index'])->na
 
 Auth::routes();
 
+Route::post('/cart/add', [\App\Http\Controllers\CartController::class, 'add'])->name('cart.add');
+Route::get('/cart' , [\App\Http\Controllers\CartController::class , 'index'])->name('cart');
+Route::put('/cart/{id}', [\App\Http\Controllers\CartController::class , 'updateQuantity'])->name('cart.update');
+Route::delete('/cart/{id}', [\App\Http\Controllers\CartController::class , 'destroy'])->name('cart.destroy');
+Route::post('order' , [\App\Http\Controllers\CartController::class , 'order'])->name('order');
+Route::get('/order/list' , [\App\Http\Controllers\CartController::class , 'orderList'])->name('order.list');
+
 
 Route::prefix('admin')->middleware('admin')->group(function (){
     Route::resource('doctors', \App\Http\Controllers\DoctorController::class);
@@ -52,6 +59,11 @@ Route::prefix('admin')->middleware('admin')->group(function (){
     Route::get('/recipt/send/bpjs/{id}' , [\App\Http\Controllers\AppointmentMedicineController::class , 'reciptBpjs'] )->name('send.bpjs');
 
     Route::get('/dashboard' , [\App\Http\Controllers\AdminController::class , 'index'])->name('admin.dashboard');
+
+
+    Route::get('/orderlist' , [\App\Http\Controllers\AdminController::class , 'orderList'])->name('admin.orderList');
+    Route::put('/orders/cancel/{id}', [\App\Http\Controllers\AdminController::class, 'cancelOrder'])->name('orders.cancel');
+    Route::put('/orders/send/{id}', [\App\Http\Controllers\AdminController::class, 'sendOrder'])->name('orders.send');
 
 });
 

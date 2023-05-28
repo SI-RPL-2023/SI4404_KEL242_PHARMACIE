@@ -56,7 +56,7 @@ class MedicineController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|max:255',
-            'description' => 'nullable',
+            'description' => 'nullable' ,
             'price' => 'required|numeric|min:0',
             'stock' => 'required|integer|min:0',
         ]);

@@ -42,86 +42,122 @@
 <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 " id="sidenav-main">
     <div class="sidenav-header">
         <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-        <a class="navbar-brand m-0" href=" {{route('landing')}} " target="_blank">
+        <a class="navbar-brand m-0" href="{{route('landing')}}" target="_blank">
             <img src="{{asset('logo.png')}}" class="navbar-brand-img h-100" alt="main_logo">
             <span class="ms-1 font-weight-bold">Pharmacie</span>
         </a>
     </div>
     <hr class="horizontal dark mt-0">
     <div class="collapse navbar-collapse  w-auto h-auto" id="sidenav-collapse-main">
+
         <ul class="navbar-nav">
             <li class="nav-item ">
-                <a class="nav-link {{ request()->routeIs('cart') ? 'active' : '' }}" href="{{route('cart')}}">
-                    <span class="sidenav-mini-icon"> C </span>
-                    <span class="sidenav-normal"> Carts </span>
+                <a class="nav-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}" href="{{route('admin.dashboard')}}">
+                    <span class="sidenav-mini-icon"> DS </span>
+                    <span class="sidenav-normal"> Dashboard </span>
                 </a>
             </li>
         </ul>
 
         <ul class="navbar-nav">
             <li class="nav-item ">
-                <a class="nav-link {{ request()->routeIs('order.list') ? 'active' : '' }}" href="{{route('order.list')}}">
+                <a class="nav-link {{ request()->routeIs('admin.orderList') ? 'active' : '' }}" href="{{route('admin.orderList')}}">
                     <span class="sidenav-mini-icon"> OL </span>
                     <span class="sidenav-normal"> Order List </span>
                 </a>
             </li>
         </ul>
 
+
+
         <ul class="navbar-nav">
             <li class="nav-item ">
-                <a class="nav-link {{ request()->routeIs('user.doctors.index') ? 'active' : '' }}" href="{{route('user.doctors.index')}}">
+                <a class="nav-link {{ request()->routeIs('doctors.index') ? 'active' : '' }}" href="{{route('doctors.index')}}">
                     <span class="sidenav-mini-icon"> D </span>
-                    <span class="sidenav-normal"> Jadwal Dokter </span>
+                    <span class="sidenav-normal"> Doctors </span>
                 </a>
             </li>
         </ul>
 
+        <ul class="navbar-nav">
+            <li class="nav-item active  ">
+                <a class="nav-link {{ request()->routeIs('schedule.index') ? 'active' : '' }}" href="{{route('schedule.index')}}">
+                    <span class="sidenav-mini-icon"> S </span>
+                    <span class="sidenav-normal"> Schedule </span>
+                </a>
+            </li>
+
+        </ul>
 
         <ul class="navbar-nav">
-            <li class="nav-item ">
-                <a class="nav-link {{ request()->routeIs('appointment.index') ? 'active' : '' }}" href="{{route('appointment.index')}}">
+            <li class="nav-item active  ">
+                <a class="nav-link {{ request()->routeIs('medicines.index') ? 'active' : '' }}" href="{{route('medicines.index')}}">
+                    <span class="sidenav-mini-icon"> M </span>
+                    <span class="sidenav-normal"> Medicine </span>
+                </a>
+            </li>
+
+        </ul>
+
+        <ul class="navbar-nav">
+            <li class="nav-item active  ">
+                <a class="nav-link {{ request()->routeIs('admin.appointments.index') ? 'active' : '' }}" href="{{route('admin.appointments.index')}}">
                     <span class="sidenav-mini-icon"> R </span>
                     <span class="sidenav-normal"> Appointment Request </span>
                 </a>
             </li>
+
         </ul>
 
         <ul class="navbar-nav">
-            <li class="nav-item ">
-                <a class="nav-link {{ request()->routeIs('appointment.payment') ? 'active' : '' }}" href="{{route('appointment.payment')}}">
-                    <span class="sidenav-mini-icon"> P</span>
-                    <span class="sidenav-normal"> Payment  </span>
+            <li class="nav-item active  ">
+                <a class="nav-link {{ request()->routeIs('admin.appointments.payment.acc') ? 'active' : '' }}" href="{{route('admin.appointments.payment.acc')}}">
+                    <span class="sidenav-mini-icon"> Ap </span>
+                    <span class="sidenav-normal"> Appointment Payment </span>
                 </a>
             </li>
+
         </ul>
 
         <ul class="navbar-nav">
-            <li class="nav-item ">
-                <a class="nav-link {{ request()->routeIs('appointment.scheduled') ? 'active' : '' }}" href="{{route('appointment.scheduled')}}">
-                    <span class="sidenav-mini-icon"> As</span>
-                    <span class="sidenav-normal"> Appointment Scheduled  </span>
+            <li class="nav-item active  ">
+                <a class="nav-link {{ request()->routeIs('admin.appointments.payment.bpjs') ? 'active' : '' }}" href="{{route('admin.appointments.payment.bpjs')}}">
+                    <span class="sidenav-mini-icon"> Ap </span>
+                    <span class="sidenav-normal"> BPJS Payment </span>
                 </a>
             </li>
+
         </ul>
 
         <ul class="navbar-nav">
-            <li class="nav-item ">
-                <a class="nav-link {{ request()->routeIs('recipt.regular') ? 'active' : '' }}" href="{{route('recipt.regular')}}">
-                    <span class="sidenav-mini-icon"> As</span>
-                    <span class="sidenav-normal"> Regular Recipt  </span>
+            <li class="nav-item active  ">
+                <a class="nav-link {{ request()->routeIs('admin.appointment.schedule') ? 'active' : '' }}" href="{{route('admin.appointment.schedule')}}">
+                    <span class="sidenav-mini-icon"> SC </span>
+                    <span class="sidenav-normal"> Schedule</span>
                 </a>
             </li>
+
         </ul>
 
         <ul class="navbar-nav">
-            <li class="nav-item ">
-                <a class="nav-link {{ request()->routeIs('recipt.bpjs') ? 'active' : '' }}" href="{{route('recipt.bpjs')}}">
-                    <span class="sidenav-mini-icon"> As</span>
-                    <span class="sidenav-normal"> Bpjs Recipt  </span>
+            <li class="nav-item active  ">
+                <a class="nav-link {{ request()->routeIs('admin.appointment.schedule.recipt.regular') ? 'active' : '' }}" href="{{route('admin.appointment.schedule.recipt.regular')}}">
+                    <span class="sidenav-mini-icon"> SR </span>
+                    <span class="sidenav-normal"> Schedule Recipt <br> Regular</span>
                 </a>
             </li>
+
         </ul>
 
+        <ul class="navbar-nav">
+            <li class="nav-item active  ">
+                <a class="nav-link {{ request()->routeIs('admin.appointment.schedule.recipt.Bpjs') ? 'active' : '' }}" href="{{route('admin.appointment.schedule.recipt.Bpjs')}}">
+                    <span class="sidenav-mini-icon"> SR </span>
+                    <span class="sidenav-normal"> Schedule Recipt <br> BPJS</span>
+                </a>
+            </li>
+
+        </ul>
     </div>
 
 </aside>
@@ -131,7 +167,7 @@
         <div class="container-fluid py-1 px-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
-                </ol>
+                        </ol>
             </nav>
             <div class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none ">
                 <a href="javascript:;" class="nav-link p-0">
@@ -148,9 +184,9 @@
                 </div>
                 <ul class="navbar-nav  justify-content-end">
                     <li class="nav-item d-flex align-items-center">
-                        <a href="" class="nav-link text-white font-weight-bold px-0" target="_blank">
+                        <a href="../../pages/authentication/signin/illustration.html" class="nav-link text-white font-weight-bold px-0" target="_blank">
                             <i class="fa fa-user me-sm-1"></i>
-                            <span class="d-sm-inline d-none">Welcome , {{\Illuminate\Support\Facades\Auth::user()->name}}</span>
+                            <span class="d-sm-inline d-none">Sign In</span>
                         </a>
                     </li>
                     <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
