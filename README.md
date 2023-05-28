@@ -13,3 +13,5 @@ Bla Bla Bla
 | Ersa Yunianti Sintha            | 1202202264         | Programer  |
 | Debora Natalia Ginting          | 1202204050         | Programer  |
 | Aisha Nabila          | 1202200155         | Programer  |
+
+# Cara Menjalankan Aplikasi
