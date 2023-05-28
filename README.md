@@ -1,10 +1,10 @@
 # SI4404 KELOMPOK 242 PHARMACIE
 Ini adalah Tugas Besar Rekayasa Perangkat Lunak
 
-#Tentang Pharmacie
+# Tentang Pharmacie
 Bla Bla Bla
 
-#Anggota Kelompok
+# Anggota Kelompok
 | Nama     | NIM      | Role     |
 | ------------- | ------------- | -------- |
 | Agnes Yemima Br Sembiring          | 1202204342         | Project Manager  |
