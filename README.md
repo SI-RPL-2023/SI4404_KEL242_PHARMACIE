@@ -2,7 +2,8 @@
 Ini adalah Tugas Besar Rekayasa Perangkat Lunak
 
 # Tentang Pharmacie
-Bla Bla Bla
+Pharmacie adalah website SDGs 3 (Kehidupan Sehat dan Sejahtera) yang menyediakan layanan konsultasi bersama dokter, layanan penjualan obat-obatan, antrian konsultasi bersama dokter, layanan upload resep obat, dll.
+Website ini terdiri dari akun user dan admin. Dimana admin dapat melakukan acc atas schedule request, menambahkan list dokter, list obat-obatan, menerima pembayaran dari user, dll.
 
 # Anggota Kelompok
 | Nama     | NIM      | Role     |
@@ -15,3 +16,5 @@ Bla Bla Bla
 | Aisha Nabila          | 1202200155         | Programer  |
 
 # Cara Menjalankan Aplikasi
+
+
