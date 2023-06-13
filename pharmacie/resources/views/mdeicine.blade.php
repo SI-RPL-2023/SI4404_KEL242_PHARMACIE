@@ -37,11 +37,11 @@
     <div class="container">
         <div class="d-flex flex-wrap align-content-center center justify-content-center">
         @foreach($medicine as $m)
-            <div class="card col-3 m-4">
-                <img class="card-img-top w-100 h-75" src="{{asset('medicinePhoto/'.$m->photo)}}">
+            <div class="card m-4" style="width: 20rem;">
+                <img class="card-img-top h-75" src="{{asset('medicinePhoto/'.$m->photo)}}">
                 <div class="card-body">
-                    <h4>{{$m->name}}</h4>
-                    <p>
+                    <h4 class="card-title">{{$m->name}}</h4>
+                    <p class="card-text">
                         {{$m->description}}
                     </p>
 

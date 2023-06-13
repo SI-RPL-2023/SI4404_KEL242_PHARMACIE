@@ -3,12 +3,12 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="card">
+            <div class="col-md-12 col-sm">
+                <div class="container card col-md-12">
                     <div class="card-header">
                         <h4>Medicines</h4>
                     </div>
-                    <div class="card-body">
+                    <div class="container card-body col-lg-12 col-md-10 ">
                         <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addModal">Add Medicine</button>
                         <table class="table table-bordered" id="table-med">
                             <thead>
@@ -25,8 +25,8 @@
                             @foreach ($medicines as $medicine)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $medicine->name }}</td>
-                                    <td>{{ $medicine->description }}</td>
+                                    <td >{{ $medicine->name }}</td>
+                                    <td class="container text-wrap">{{ $medicine->description }}</td>
                                     <td>{{ $medicine->price }}</td>
                                     <td>{{ $medicine->stock }}</td>
                                     <td>

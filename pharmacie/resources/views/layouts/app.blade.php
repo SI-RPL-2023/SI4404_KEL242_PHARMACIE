@@ -41,7 +41,7 @@
                         @else
 
                             <li class="nav-item">
-                                <a class="nav-link btn btn-success text-white m-2 p-2" href="{{ route('landing.medicine') }}">  Cart ( {{count(\Illuminate\Support\Facades\Auth::user()->carts)}} )</a>
+                                <a class="nav-link btn btn-success text-white m-2 p-2" href="{{ route('cart') }}">  Cart ( {{count(\Illuminate\Support\Facades\Auth::user()->carts)}} )</a>
                             </li>
 
                         @endguest
